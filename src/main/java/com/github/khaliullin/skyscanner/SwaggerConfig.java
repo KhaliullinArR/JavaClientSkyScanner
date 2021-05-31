@@ -10,12 +10,17 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @Configuration
 @EnableSwagger2
 public class SwaggerConfig {
+
     @Bean
     public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.github.romankh3.flightsmonitoring.rest.controller"))
+                .apis(RequestHandlerSelectors.basePackage("com.github.khaliullin.skyscanner"))
                 .paths(PathSelectors.any())
                 .build();
     }
+
+
+
+
 }
